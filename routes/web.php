@@ -11,6 +11,8 @@
 |
 */
 
+use GuzzleHttp\Middleware;
+
 Route::redirect('/', '/home');
 
 Auth::routes();
@@ -41,4 +43,10 @@ Route::get('paypal/checkout-cancel', 'PayPalController@cancelPage')->name('paypa
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::group(['prefix'=>'seller','middleware'=>'auth','as'=>'seller','namespace'=>'Seller'],function(){
+    Route::redirect('/','seller/orders');
+    Route::resource('/orders', 'OrderController');
+    Route::get('/orders/delivered/{order}', 'OrderController@markDelivered')->name('order.delivered');
 });

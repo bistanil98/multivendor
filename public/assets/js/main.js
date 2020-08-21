@@ -459,17 +459,6 @@
     });
     
     
-    /*--
-    menu-toggle
-    ------------------------*/
-    $('.menu-toggle').on('click', function() {
-        if ($('.menu-toggle').hasClass('is-active')) {
-            $('.hamburger-menu nav').removeClass('menu-open');
-        } else {
-            $('.hamburger-menu nav').addClass('menu-open');
-        }
-    });
-    
     
     /*--
     	Hamburger js

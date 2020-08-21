@@ -11,6 +11,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class OrderPaid extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $order;
 
     /**
@@ -22,7 +23,6 @@ class OrderPaid extends Mailable
     {
         $this->order = $order;
     }
-
 
     /**
      * Build the message.

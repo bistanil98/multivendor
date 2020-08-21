@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Coupon;
 use App\Product;
 use Cart;
 use Illuminate\Http\Request;
@@ -29,12 +30,12 @@ class CartController extends Controller
     public function index()
     {
 
-
         $cartItems = \Cart::session(auth()->id())->getContent();
 
 
         return view('cart.index', compact('cartItems'));
     }
+
     public function destroy($itemId)
     {
 
@@ -42,10 +43,11 @@ class CartController extends Controller
 
         return back();
     }
-    public function update($itemId)
+
+    public function update($rowId)
     {
 
-        \Cart::session(auth()->id())->update($itemId, [
+        \Cart::session(auth()->id())->update($rowId, [
             'quantity' => [
                 'relative' => false,
                 'value' => request('quantity')
@@ -54,11 +56,35 @@ class CartController extends Controller
 
         return back();
     }
+
     public function checkout()
     {
         return view('cart.checkout');
     }
 
+    public function applyCoupon()
+    {
+        $couponCode = request('coupon_code');
+
+        $couponData = Coupon::where('code', $couponCode)->first();
+
+        if(!$couponData) {
+            return back()->withMessage('Sorry! Coupon does not exist');
+        }
 
 
+        //coupon logic
+        $condition = new \Darryldecode\Cart\CartCondition(array(
+            'name' => $couponData->name,
+            'type' => $couponData->type,
+            'target' => 'total',
+            'value' => $couponData->value,
+        ));
+
+        Cart::session(auth()->id())->condition($condition); // for a speicifc user's cart
+
+
+        return back()->withMessage('coupon applied');
+
+    }
 }
