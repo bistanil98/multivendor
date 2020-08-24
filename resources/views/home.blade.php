@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <div class="single-slider single-slider-hm3 bg-img pt-170 pb-173"
-                        style="background-image: url(assets/img/slider/20.jpg)">
+                        style="background-image: url(assets/img/slider/5.jpg)">
                         <div class="slider-animation slider-content-style-3 fadeinup-animated">
                             <h2 class="animated">Invention of <br>design platform</h2>
                             <h4 class="animated">Best Product With warranty </h4>
@@ -99,7 +99,7 @@
         <div class="custom-row-2">
             <div class="custom-col-style-2 electronic-banner-col-3 mb-30">
                 <div class="electronic-banner-wrapper">
-                    <img src="assets/img/banner/15.jpg" alt="">
+                    <img src="assets/img/banner/dYoZ120612.jpg" alt="">
                     <div class="electro-banner-style electro-banner-position">
                         <h1>Live 4K! </h1>
                         <h2>up to 20% off</h2>
@@ -110,7 +110,7 @@
             </div>
             <div class="custom-col-style-2 electronic-banner-col-3 mb-30">
                 <div class="electronic-banner-wrapper">
-                    <img src="assets/img/banner/16.jpg" alt="">
+                    <img src="assets/img/banner/dYoZ120612.jpg" alt="">
                     <div class="electro-banner-style electro-banner-position2">
                         <h1>Xoxo ssl </h1>
                         <h2>up to 15% off</h2>
@@ -121,7 +121,7 @@
             </div>
             <div class="custom-col-style-2 electronic-banner-col-3 mb-30">
                 <div class="electronic-banner-wrapper">
-                    <img src="assets/img/banner/17.jpg" alt="">
+                    <img src="assets/img/banner/dYoZ120612.jpg" alt="">
                     <div class="electro-banner-style electro-banner-position3">
                         <h1>BY Laptop</h1>
                         <h2>Super Discount</h2>

@@ -5,7 +5,8 @@
 
 
 <div class="breadcrumb-area pt-205 breadcrumb-padding pb-210"
-    style="background-image: url(/assets/img/bg/breadcrumb.jpg)">
+    style="background-image: url(/assets/img/bg/51.jpg)"
+    >
     <div class="container-fluid">
         <div class="breadcrumb-content text-center">
             <h2> shop grid</h2>

@@ -14,19 +14,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($orders as $order)
+        @foreach ($orders as $suborder)
         <tr>
-            <td scope="row">{{$order->order_number}}</td>
-            <td>{{$order->seller_order_status}}
-            @if ($order->seller_order_status !='completed')
+            <td scope="row">{{$suborder->order->order_number}}</td>
+            <td>{{$suborder->status}}
+            @if ($suborder->status !='completed')
 
-            <a href="{{route('seller.order.delivered',$order)}}" type="button"  class="btn btn-primary btn-sm">make as delivered</a>
+            <a href="{{route('seller.order.delivered',$suborder)}}" type="button"  class="btn btn-primary btn-sm">make as delivered</a>
             @endif
             </td>
-            <td>{{$order->item_count_seller}}</td>
-            <td>{!! $order->shipping_full_address !!}</td>
+            <td>{{$suborder->item_count}}</td>
+            <td>{!! $suborder->order->shipping_address !!}</td>
             <td>
-                <a href="{{route('seller.orders.show',$order)}}" type="button" class="btn btn-primary btn-sm">View</a>
+                <a href="{{route('seller.orders.show',$suborder)}}" type="button" class="btn btn-primary btn-sm">View</a>
             </td>
         </tr>
 
